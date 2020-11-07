@@ -1,0 +1,61 @@
+.welcomeCard.dayTheme{
+    background-color: var(--white);
+    .welcomeCard__header{
+        color: black;
+    }
+    hr{
+        margin:0 80px;
+        border: 1px solid var(--light-blue);
+    }
+    .welcomeCard__offerings{
+        color: black;
+    }
+}
+.welcomeCard{
+    background-color: #3D3F43;
+    width: clamp(300px,80%,600px);
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    height: 420px;
+    text-align: center;
+    border-radius: 15px;
+    padding-top: 95px;
+    &__header{
+        color: var(--white);
+        font-weight: 500;
+    }
+    hr{
+        margin:0 80px;
+        border: 1px solid #303236;
+    }
+    &__infoText{
+        color: var(--light-blue);
+        font-size: 18px;
+        margin-top: 50px;
+        font-weight: normal;
+    }
+    &__offerings{
+        font-weight: normal;
+        color: var(--white);
+        margin-bottom: 50px;
+
+    }
+    &__button{
+        background: linear-gradient(90deg, #31A5D9 0%, #1E96A0 100%);
+        box-shadow: 0px 7px 10px -5px rgba(43, 45, 48, 0.604513);
+        width: 198px;
+        height: 50px;
+        margin-top: 25px;
+        border:none;
+        border-radius: 25px;
+        color: var(--white);
+        &:hover{
+            cursor: pointer;
+        }
+        &:focus{
+            outline: none;
+        }
+    }
+}

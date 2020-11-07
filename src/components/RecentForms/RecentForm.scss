@@ -1,0 +1,33 @@
+.recentForm.dayTheme{
+    background-color: var(--white);
+    color: black;
+}
+.recentForm{
+    background-color: #3D3F43;
+    color:white;
+    width: clamp(300px,80%,600px);
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+    h1{
+        text-align: center;
+    }
+    ul{
+        list-style: none;
+        margin-bottom: 50px;
+        height: clamp(320px, 50vh, 800px);
+        overflow-y: scroll;
+        scrollbar-color: red yellow;
+        
+    }
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+}
+::-webkit-scrollbar-thumb:vertical {
+    background-color: var(--light-blue);
+}

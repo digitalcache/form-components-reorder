@@ -1,0 +1,28 @@
+.createNewContainer.dayTheme{
+    background-color: var(--white);
+    color: black;
+}
+.createNewContainer{
+    background-color: #3D3F43;
+    position: relative;
+    color:white;
+    width: clamp(300px,80%,600px);
+    margin: 120px auto;
+    border-radius: 15px;
+    padding:0 40px 20px 40px;
+    h1{
+        text-align: center;
+        padding-top: 50px;
+    }
+    .gridContainer{
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-gap: 10px 10px;
+        .gridItem{
+            display: contents;
+        }
+        .categoryTitle{
+            line-height: 86px;
+        }
+    }
+}

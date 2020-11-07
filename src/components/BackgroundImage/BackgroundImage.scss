@@ -1,0 +1,10 @@
+.randomImage{
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    opacity: 0.2;
+    object-fit: cover;
+    height: 100%;
+    z-index: -1;
+}

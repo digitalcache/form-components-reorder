@@ -1,0 +1,46 @@
+header{
+    background-color: var(--white);
+    padding: 15px 0;
+    position: fixed;
+    z-index: 1;
+    top:0;
+    left:0;
+    width: 100%;
+    nav{
+        padding: 0 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logoImage{
+            width: 65px;
+            height: 56px;
+        }
+        .logoText{
+            text-transform: uppercase;
+            color: var(--light-blue);
+            font-weight: 600;
+            font-size: 1.5rem;
+            flex: 1;
+            margin-left: 15px;
+        }   
+        .navButtonContainer{
+            display: flex;
+            align-items: center;
+            .button{
+                font-weight: 500;
+                margin-left: 10px;
+                color:var(--dark-background);
+                &:hover{
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
+            .icon{
+                height: 20px;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
