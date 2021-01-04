@@ -6,9 +6,10 @@ function StaticText() {
     const dayTrue = useContext(ThemeContext)
     return (
         <div className="staticTextContainer">
+            <p className="headerType">Short Answer Text Header</p>
             <input 
                 // value={}
-                placeholder="Enter Static Text" 
+                placeholder="have to delete this component" 
                 className={dayTrue ? 'themeContainer darkTheme':'themeContainer'}
             ></input>
         </div>

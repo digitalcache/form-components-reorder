@@ -1,6 +1,7 @@
 .formItemContainer.dayTheme{
     &:hover{
-        background: var(--dark-background);
+        background-color: #57607E;
+        // background: var(--dark-background);
         .formItem{
             color:var(--white);
         }
@@ -9,9 +10,13 @@
 .formItemContainer{
     display: flex;
     align-items: center;
-    margin-top:20px;
-    margin-right: 40px;
-    border-radius: 10px;
+    padding: 10px 10px;
+    // margin-top:20px;
+    // margin-right: 40px;
+    // border-radius: 10px;
+    .fileIcon {
+        height: 30px;
+    }
     &:hover{
         background: cornflowerblue;
     }
@@ -19,6 +24,8 @@
         display: flex;
         margin-left:10px;
         font-weight: bold;
+        // color: rgb(43, 43, 43);
+        color: #57607E;
         font-size: 1.25rem;
         font-family: sans-serif;
         width: 100%;
@@ -26,9 +33,9 @@
 
         align-items: center;
         justify-content: space-between;
-        margin-right:50px;
+        // margin-right:50px;
         img{
-            height: 30px;
+            height: 20px;
             &:hover{
                 cursor: pointer;
             }

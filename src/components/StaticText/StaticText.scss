@@ -1,23 +1,36 @@
 .staticTextContainer{
     flex:1;
     border-radius: 5px;
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
+    // margin-bottom: 50px;
+    margin-bottom: 25px;
+    .headerType{
+        margin: 0;
+        margin-bottom: 5px;
+        font-weight: 500;
+        opacity: 0.3;
+        color: #383838;
+    }
     .title{
         min-width: 60px;
     }
     .themeContainer{
         box-sizing: border-box;
+        height: 40px;
         background-color: white;
         width: 100%;
         color:black;
         // height: 100%;
         border-radius: 5px;
         padding: 5px 10px;
-        margin-left:15px;
+        border: none;
+        // margin-left:15px;
     }
     .darkTheme{
-        background-color: var(--dark-background);
+        background-color: white;
+
+        // background-color: var(--dark-background);
         color: var(--white);
     }
 }

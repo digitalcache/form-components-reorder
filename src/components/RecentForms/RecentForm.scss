@@ -1,33 +1,43 @@
 .recentForm.dayTheme{
-    background-color: var(--white);
+    // background-color: var(--white);
     color: black;
 }
 .recentForm{
-    background-color: #3D3F43;
+    // background-color: #3D3F43;
+    margin-top: 65px;
     color:white;
-    width: clamp(300px,80%,600px);
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    border-radius: 15px;
+    // width: clamp(300px,80%,600px);
+    // position: absolute;
+    // top:50%;
+    // left:50%;
+    // transform: translate(-50%,-50%);
+    // border-radius: 15px;
     h1{
+        color: #57607E;
         text-align: center;
+        padding-left: 15px;
+        padding-top: 25px;
+        font-size: 1.5rem;
+        // font-weight: 500;
+        font-family: "BwModelica-Bold";
+
     }
     ul{
         list-style: none;
-        margin-bottom: 50px;
-        height: clamp(320px, 50vh, 800px);
+        padding: 0;
+        // margin-bottom: 50px;
+        // height: clamp(320px, 50vh, 800px);
         overflow-y: scroll;
         scrollbar-color: red yellow;
+        margin: 0 0 40px 0;
         
     }
 }
 
-::-webkit-scrollbar {
-    width: 15px;
-    height: 15px;
-}
-::-webkit-scrollbar-thumb:vertical {
-    background-color: var(--light-blue);
-}
+// ::-webkit-scrollbar {
+//     width: 15px;
+//     height: 15px;
+// }
+// ::-webkit-scrollbar-thumb:vertical {
+//     background-color: var(--light-blue);
+// }

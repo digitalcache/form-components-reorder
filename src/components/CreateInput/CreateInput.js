@@ -3,13 +3,12 @@ import AddIcon from './../../static/images/addIcon.png'
 import './CreateInput.scss'
 
 export default function CreateInput(props) {
-    const types = ["static", "input-text", "radio",]
+    const types = ["checkboxes", "short-answer", "long-answer", "multi-choice", "dropdown"]
     return (
-        <div>
             <div className="addComponent">
-                <span>Add Component</span>
-                <img className="dropDownIcon" src={AddIcon} alt="Add Icon" />
-                <div className="types">
+                <span onClick={()=> props.addComponent()}>Add Question</span>
+                {/* <img className="dropDownIcon" src={AddIcon} alt="Add Icon" /> */}
+                {/* <div className="types">
                     <ul>
                         {
                             types.map(value=> <li 
@@ -20,9 +19,8 @@ export default function CreateInput(props) {
                                 </li>)
                         }
                     </ul>
-                </div>
+                </div> */}
             </div>
             
-        </div>
     )
 }

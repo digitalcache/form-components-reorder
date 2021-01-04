@@ -9,32 +9,36 @@ export const actionTypes = {
     ADD_INPUT_FAILED: "ADD_INPUT_FAILED"
 };
 
-export const fetchFormState = () => dispatch => {
-    dispatch({ type: actionTypes.FORM_COMPONENTS_START, payload: {} });
-    
-    
+export const setFormState = (formState) => dispatch => {
+    dispatch({ type: actionTypes.FORM_STATE_START, payload: {} });
+    dispatch({ type: actionTypes.FORM_STATE_LOADED, payload: formState });
 }
 export const addFormOfType = (type, order) => dispatch => {
     dispatch({ type: actionTypes.ADD_INPUT_START, payload: {} });
-    if(type === "static"){
+    if(type === "Checkboxes"){
         dispatch({ type: actionTypes.ADD_INPUT_LOADED, payload: {
-            "type" : "static",
-            "value" : "",
-            "order" : order
+            type : "Checkboxes",
+            question : "",
          } });
-    } else if(type === "input-text") {
+    } else if(type === "Short Answer") {
         dispatch({ type: actionTypes.ADD_INPUT_LOADED, payload: {
-            "type" : "text-input",
-            "question" : "Enter Question",
-            // "allowed-characters": 500,
-            "order" : order
+            type : "Short Answer",
+            question : "",
         } });
-    } else if(type === "radio") {
+    } else if(type === "Long Answer") {
         dispatch({ type: actionTypes.ADD_INPUT_LOADED, payload: {
-            "type" : "radio",
-            "question" : "Enter Question",
-            // "values" : ["red","green","yellow"],
-            "order" : 2
+            type : "Long Answer",
+            question : "",
+        } });
+    } else if(type === "Multiple Choice") {
+        dispatch({ type: actionTypes.ADD_INPUT_LOADED, payload: {
+            type : "Multiple Choice",
+            question : "",
+        } });
+    } else if(type === "Dropdown") {
+        dispatch({ type: actionTypes.ADD_INPUT_LOADED, payload: {
+            type : "Dropdown",
+            question : "",
         } });
     } else {
         dispatch({ type: actionTypes.ADD_INPUT_FAILED, payload: {} });

@@ -1,5 +1,8 @@
+// @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap');
+
 header{
-    background-color: var(--white);
+    background-color: #1B2342;
     padding: 15px 0;
     position: fixed;
     z-index: 1;
@@ -7,40 +10,64 @@ header{
     left:0;
     width: 100%;
     nav{
-        padding: 0 30px;
+        padding: 0 15px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        user-select: none;
+
         .logoImage{
-            width: 65px;
-            height: 56px;
+            height: 30px;
+            margin-right: 10px;
         }
         .logoText{
-            text-transform: uppercase;
-            color: var(--light-blue);
-            font-weight: 600;
-            font-size: 1.5rem;
+            text-transform: capitalize;
+//   font-family: "Vollkorn-Regular";
+//   font-family: "penna";
+font-family: 'Mina', sans-serif;
+//   font-family: "Barcelony";
+//   font-family: "ginebra_font";
+
+
+
+
+
+            // font-family: 'Sacramento', cursive;
+
+            color: #dadada;
+            font-weight: bold;
+            font-size: 24px;
             flex: 1;
-            margin-left: 15px;
+            // margin-left: 15px;
         }   
         .navButtonContainer{
             display: flex;
             align-items: center;
+            user-select: none;
             .button{
                 font-weight: 500;
                 margin-left: 10px;
                 color:var(--dark-background);
+                font-size: 14px;
+
                 &:hover{
                     cursor: pointer;
                     text-decoration: underline;
                 }
             }
             .icon{
+
                 height: 20px;
+                // filter: brightness(1.3);
                 &:hover{
-                    cursor: pointer;
+            user-select: none;
+
+                    cursor: none;
                 }
             }
         }
     }
+}
+a:link{
+    text-decoration: none!important;
 }

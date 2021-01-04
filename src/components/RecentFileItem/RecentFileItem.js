@@ -8,7 +8,7 @@ export default function RecentFileItem(props) {
     const dayTrue = useContext(ThemeContext)
     return (
         <li className={dayTrue ? 'dayTheme formItemContainer' : 'formItemContainer'}>
-            <img src={FileIcon} alt="File Icon"></img>
+            <img className="fileIcon" src={FileIcon} alt="File Icon"></img>
             <div className="formItem">
                 <span className="formTitle">Form  1</span>
                 <img src={DownloadButton} alt="delete button" />

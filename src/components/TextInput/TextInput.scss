@@ -3,25 +3,34 @@
     border-radius: 5px;
     // display: flex;
     // align-items: center;
-    margin-right: 15px;
+    // margin-right: 15px;
+    .headerType{
+        margin: 0;
+        margin-bottom: 5px;
+        margin-bottom: 5px;
+        font-weight: 500;
+        opacity: 0.3;
+        color: #383838;
+    }
     .title{
         min-width: 60px;
     }
     .themeContainer{
         box-sizing: border-box;
         background-color: white;
+        border: none;
         width: 100%;
         color:black;
-        // height: 100%;
+        height: 40px;
         border-radius: 5px;
         padding: 5px 10px;
-        margin-left:15px;
+        // margin-left:15px;
         &:last-of-type{
             margin-top:10px;
         }
     }
     .darkTheme{
-        background-color: var(--dark-background);
-        color: var(--white);
+        // background-color: var(--dark-background);
+        // color: var(--white);
     }
 }

@@ -1,7 +1,6 @@
 import React , { Component } from 'react'
 import { ThemeContext } from '../../themeContext'
-import UpArrow from './../../static/images/upArrow.png'
-import DownArrow from './../../static/images/downArrow.png'
+import Arrow from './../../static/images/prevButton.png'
 import DeleteButton from './../../static/images/deleteButton.svg'
 
 import './FormComponentStyler.scss'
@@ -18,9 +17,9 @@ const FormComponentStyler = (FormComponentWrapper) =>
             {...this.props}
             />
             <div className={this.dayTrue ? 'formManage dayTheme':'formManage'} >
-                <span><img src={UpArrow} alt="Up arrow"/></span>
-                <span><img src={DownArrow} alt="down arrow"/></span>
-                <span><img src={DeleteButton} alt="delete button"/></span>
+                <span><img className="upArrow" src={Arrow} alt="Up arrow"/></span>
+                <span><img src={Arrow} className="downArrow" alt="down arrow"/></span>
+                <span><img onClick={this.props.deleteComponent} className="deleteButton" src={DeleteButton} alt="delete button"/></span>
             </div>
           </div>
         

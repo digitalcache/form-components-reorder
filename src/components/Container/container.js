@@ -1,33 +1,34 @@
-import React, { Suspense, lazy } from 'react'
+import React from 'react'
 import {Route, BrowserRouter as Router, Switch, withRouter } from 'react-router-dom';
-import { ThemeContext } from '../../themeContext';
-
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import BackgroundChanger from '../BackgroundChanger/BackgroundChanger';
-import BackgroundImage from '../BackgroundImage/BackgroundImage';
 import Header from '../Header/Header';
-
-
-const WelcomeCard = lazy(() => import('../WelcomeCard/WelcomeCard'));
-const RecentForms = lazy(() => import('../RecentForms/RecentForms'));
-const CreateNew = lazy(() => import('../CreateNew/CreateNew'));
+import WelcomeCard from '../WelcomeCard/WelcomeCard';
+import RecentForms from '../RecentForms/RecentForms';
+import NavigationSlider from '../NavigationSlider/NavigationSlider';
+import CreateNew from '../CreateNew/CreateNew';
 
 function Container (props){
     const HeaderRoutedComponent = withRouter(props => <Header {...props}/>);
     return (
-        <Router>
-            <ThemeContext.Provider value={props.day}>
-                {/* Passing background image src from background changer wrapper */}
-                <BackgroundImage image={props.backgroundImage} />
+        <div className="centralContainer">
+            <Router>
                 <HeaderRoutedComponent />
-                <Suspense fallback={<div>Loading...</div>} >
-                    <Switch>
-                        <Route path="/" exact component={WelcomeCard} />
-                        <Route path="/recent" component={RecentForms} />
-                        <Route path="/create" component={CreateNew} />
-                    </Switch>
-                </Suspense>
-            </ThemeContext.Provider>
-        </Router>
+                <Route render={({location})=> (
+                    <TransitionGroup>
+                        <CSSTransition key={location.key} timeout={300} classNames="fade">
+                            <Switch location={location}>
+                                <Route path="/" exact component={WelcomeCard} />
+                                <Route path="/nav" exact component={NavigationSlider} />
+                                <Route path="/recent" component={RecentForms} />
+                                <Route path="/create" component={CreateNew} />
+                            </Switch>
+                        </CSSTransition>
+                    </TransitionGroup>
+                )}>
+                </Route>
+            </Router>
+        </div>
     )
 }
 

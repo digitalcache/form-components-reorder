@@ -1,15 +1,155 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://p.typekit.net/p.css?s=1&k=etn4xhi&ht=tk&f=139.140.175&a=12496916&app=typekit&e=css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap');
+
 :root{
   --light-blue: #2CCDEA;
-  --dark-background: #303236;
+  --main-blue: #3A57FC;
+  --dark-background: #141936;
+  --light-background: #E9EFFB;
   --white: #fff;
-  font-size: 16px;
+  font-size: 12px;
 }
+
+@font-face {
+  font-family: "BwModelica-Thin";
+  src: url("./static/BwModelica-Thin.otf") format("opentype");
+}
+@font-face {
+  font-family: "BwModelica-Regular";
+  src: url("./static/BwModelica-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "BwModelica-Medium";
+  src: url("./static/BwModelica-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "BwModelica-Bold";
+  src: url("./static/BwModelica-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Barcelony";
+  src: url("./static/Barcelony.ttf") format("truetype");
+}
+/* @font-face {
+  font-family: "proxima-nova";
+  src: url("./static/proxima-nova.ttf") format("truetype");
+} */
+
 body {
   margin: 0;
   background-color: var(--dark-background);
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'proxima-nova'; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 0;
+}
+.centralContainer {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.spacer{
+  min-height: 30px;
+}
+.footer {
+  /* position: relative; */
+  /* font-family: "proxima-nova",sans-serif;  */
+
+  /* letter-spacing: 1px; */
+  /* bottom: 0; */
+  width: 100%;
+  font-size: 18px;
+  /* background-color: #57607E; */
+  background-color: rgba(29, 29, 29, 0.9);
+  /* background-color: rgba(87,96,126, 0.9); */
+  /* background-color: var(--light-background); */
+
+  text-align: center;
+  padding: 5px 0;
+  color: white;
+  letter-spacing: 1px;
+  /* z-index: 1; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+   
+}
+.footer img {
+  /* filter: brightness(0.7); */
+}
+.footer p {
+  margin: 5px;
+}
+.footer .reactLogo {
+    height: 25px;
+    margin: 0 5px;
+    -webkit-animation: rotating 5s linear infinite;
+    -moz-animation: rotating 5s linear infinite;
+    -ms-animation: rotating 5s linear infinite;
+    -o-animation: rotating 5s linear infinite;
+    animation: rotating 5s linear infinite;
+
+}
+.footer .reduxLogo {
+  height: 20px;
+  margin: 2px 5px 0 8px;
+  filter: brightness(2);
+  -webkit-animation: rotating 5s linear infinite;
+  -moz-animation: rotating 5s linear infinite;
+  -ms-animation: rotating 5s linear infinite;
+  -o-animation: rotating 5s linear infinite;
+  animation: rotating 5s linear infinite;
+}
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.fade-appear,
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms linear 150ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 150ms linear;
 }

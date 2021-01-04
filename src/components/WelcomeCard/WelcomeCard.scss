@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 .welcomeCard.dayTheme{
-    background-color: var(--white);
+    // background-color: var(--white);
     .welcomeCard__header{
-        color: black;
+        // color: black;
+        color: var(--light-blue);
+
     }
     hr{
         margin:0 80px;
@@ -12,29 +15,48 @@
     }
 }
 .welcomeCard{
-    background-color: #3D3F43;
-    width: clamp(300px,80%,600px);
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    height: 420px;
+    user-select: none;
+
+    margin: 25px 0 40px 0;
+    // background-color: #3D3F43;
+    // width: clamp(300px,80%,600px);
+    // position: absolute;
+    // top:50%;
+    // left:50%;
+    // transform: translate(-50%,-35%);
+    // height: 380px;
+    // margin-bottom: 20px;
     text-align: center;
     border-radius: 15px;
-    padding-top: 95px;
+    padding: 55px 15px 0 15px;
+
     &__header{
-        color: var(--white);
+        // color: var(--white);
         font-weight: 500;
+        margin-top: 18px;
+        line-height: 18px;
+        font-size: 12px;
+
+        color: #ced4ec;
+
     }
     hr{
+
         margin:0 80px;
         border: 1px solid #303236;
     }
     &__infoText{
-        color: var(--light-blue);
+
+        color: #ced4ec;
         font-size: 18px;
-        margin-top: 50px;
-        font-weight: normal;
+        font-weight: 600;
+
+        // letter-spacing: 0.01px;
+        // margin-top: 50px;
+    }
+    hr {
+        border-bottom: 1px solid var(--main-blue);
+
     }
     &__offerings{
         font-weight: normal;
@@ -42,17 +64,34 @@
         margin-bottom: 50px;
 
     }
+    .productOffering{
+        margin-top: 20px;
+        padding: 13px 30px;
+        border-radius: 4px;
+        background: var(--main-blue);
+        border-bottom: 1px solid var(--dark-background);
+    }
     &__button{
-        background: linear-gradient(90deg, #31A5D9 0%, #1E96A0 100%);
-        box-shadow: 0px 7px 10px -5px rgba(43, 45, 48, 0.604513);
-        width: 198px;
-        height: 50px;
-        margin-top: 25px;
+        // background: linear-gradient(90deg, #31A5D9 0%, #1E96A0 100%);
+        // box-shadow: 0px 7px 10px -5px rgba(43, 45, 48, 0.604513);
+        background: var(--main-blue);
+        width: 70%;
+        // height: 40px;
+        padding: 16px;
+        font-family: inherit;
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: 0.5px;
         border:none;
-        border-radius: 25px;
+        margin-top: 10px;
+        border-radius: 4px;
         color: var(--white);
         &:hover{
             cursor: pointer;
+        }
+        &:active{
+            cursor: pointer;
+            opacity: 0.8;
         }
         &:focus{
             outline: none;

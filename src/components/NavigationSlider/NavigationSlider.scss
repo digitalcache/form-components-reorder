@@ -1,0 +1,63 @@
+.navContainer{
+    color: white;
+    height: 100vh;
+    position: absolute;
+    left:0;
+    right:0;
+    ul {
+        padding: 100px 0 0 0;
+      
+        a {
+            cursor: none;
+          
+            li {
+                text-align: center;
+                transition: all 100ms ease-in-out;
+                -moz-transition: all 100ms ease-in-out;
+                -webkit-transition: all 100ms ease-in-out;
+                font-size: 14px;
+                text-transform: uppercase;
+                padding: 20px 0;
+                -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+         -khtml-user-select: none; /* Konqueror HTML */
+           -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none;
+                color: white;
+                &:active {
+                        opacity: 0.8;
+                        color: var(--main-blue);
+                }   
+                
+            }
+            &:nth-of-type(2n) {
+                li {
+                    background-color: #1B2342;
+                    &:active {
+                        background-color: #0d111f;
+                    }
+                }
+            }
+            &:nth-of-type(2n-1) {
+                li {
+                    background-color: var(--main-blue);
+                    &:active {
+                        color: white;
+                    }
+                }
+            }
+        }
+        
+    }
+    .navFooter {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 14px;
+        padding: 20px 0;
+        background-color: #1B2342;
+    }
+}

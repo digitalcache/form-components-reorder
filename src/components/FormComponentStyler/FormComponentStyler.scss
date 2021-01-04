@@ -1,16 +1,18 @@
 .formComponentWrapper{
     display: flex;
     justify-content: space-between;
-    margin-bottom:20px;
+    // margin-bottom:20px;
     .formManage{
-        background-color: white;
-        border-radius: 12px;
-        padding: 8px 8px;
-        margin-left:15px;
+        // background-color: white;
+        border-radius: 5px;
+        padding: 8px 0px 8px 8px;
+        // margin-left:15px;
         max-height: 70px;
+        margin-top: 12px;
         display: flex;
         flex-direction: column;
         align-items: center;
+       
         span{
             display: block;
             img{
@@ -20,14 +22,28 @@
                 }
             }
             &:last-of-type{
-                img{
-                    height: 12px;
-                }
+                // img{
+                //     height: 12px;
+                // }
             }
+        }
+        .upArrow {
+            transform: rotateZ(90deg);
+            height: 12px;
+        }
+        .downArrow {
+            height: 12px;
+
+            transform: rotateZ(270deg);
+
+        }
+        .deleteButton{
+            height: 10px;
+
         }
     }
     .dayTheme{
-        background-color: var(--dark-background);
+        // background-color: var(--dark-background);
 
     }
 }

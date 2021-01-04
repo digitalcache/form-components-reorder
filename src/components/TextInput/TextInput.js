@@ -9,8 +9,9 @@ function TextInput() {
     return (
         <div className="textInputContainer">
             <div>
-                <input className={dayTrue ? 'themeContainer darkTheme':'themeContainer'} placeholder="Enter a Question"></input>
-                <input className={dayTrue ? 'themeContainer darkTheme':'themeContainer'} placeholder="Allowed characters"></input>
+                <p className="headerType">Short Answer Text</p>
+                <input className={dayTrue ? 'themeContainer darkTheme':'themeContainer'} placeholder="Question"></input>
+                <input className={dayTrue ? 'themeContainer darkTheme':'themeContainer'} placeholder="Allowed characters in Answer"></input>
             </div>
         </div>
     )

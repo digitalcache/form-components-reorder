@@ -3,6 +3,6 @@ import './DownloadJSON.scss'
 
 export default function DownloadJSON(props) {
     return (
-        <button onClick={props.download} className="downloadJSON">Download JSON</button>
+        <button onClick={props.download} className="downloadJSON">Finalize</button>
     )
 }
